@@ -1,5 +1,6 @@
 package in.ac.charusat.studentmgmtsystem.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -7,6 +8,7 @@ import javax.persistence.Id;
 public class Student {
 
     @Id
+    @Column(name = "id", nullable = false)
     private Integer id;
     private String name;
     private String address;
