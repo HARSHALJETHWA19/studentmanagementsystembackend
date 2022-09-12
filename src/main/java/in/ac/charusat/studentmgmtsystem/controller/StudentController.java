@@ -54,13 +54,13 @@ public class StudentController {
     }
 
     // Update the student information
-    @PutMapping("/student/{id}")
-    public List<Student> updateStudent(@RequestBody Student student, @PathVariable Integer id) {
-        Student studentObj = studentRepository.findById(id).get();
-        studentObj.setName(student.getName());
-        studentObj.setAddress(student.getAddress());
-        studentRepository.save(studentObj);
-        return studentRepository.findAll();
-    }
+//    @PutMapping("/student/{id}")
+//    public List<Student> updateStudent(@RequestBody Student student, @PathVariable Integer id) {
+//        Student studentObj = studentRepository.findById(id).get();
+//        studentObj.setName(student.getName());
+//        studentObj.setAddress(student.getAddress());
+//        studentRepository.save(studentObj);
+//        return studentRepository.findAll();
+//    }
 
 }
