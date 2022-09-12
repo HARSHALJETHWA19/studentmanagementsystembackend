@@ -5,10 +5,7 @@ import in.ac.charusat.studentmgmtsystem.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @CrossOrigin(origins="https://app-dummy123.herokuapp.com")
@@ -26,6 +23,11 @@ public class StudentController {
 
     // Mappings - URL endpoints
     // Get the list of all student
+
+    @GetMapping("/")
+    public String welcome(){
+        return "<h1> welcome </h1>";
+    }
     @GetMapping("/listStudents")
     public List<Student> getAllStudents() {
         return studentRepository.findAll();
